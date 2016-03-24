@@ -1,0 +1,96 @@
+<!--
+ * Cytonn Technologies
+ *
+ * @author: Joseph Gicha e <jgichane@cytonn.com>
+ *
+ * Project: Javascript.
+ *
+ *-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Events</title>
+	<link type="javascript" href="scripts/main.js">
+</head>
+<body>
+	<div>
+		<h2>Mouse Events</h2>
+		<!-- Javascript onclick button event -->
+		<!-- Javascript dispalys date  where element ID on HTML page is demo -->
+		<button onclick="getElementById('demo').innerHTML=Date()">The time is?</button>
+		<p id="demo"></p>
+
+		<!-- Javascript Changing content on its own element on click -->
+		<button onclick="this.innerHTML=Date()">Click to see the date &amp; Time</button>
+
+		<!-- Javascript Changing content on its own element on mounseover -->
+		<p id="mouseover" onclick="makered()">this paragraph will change color on mouseover</p>
+
+	</div>
+	<div>
+		<h2>Keyboard Events</h2>
+		<!-- Javascript an alert box appears on keypress-->
+		<p>Start typing an input in the box(keypress event) </p>
+		<input type="text" onkeypress="keypress()"> 
+		<!-- Javascript background color of input box changes on keydown-->
+		<p>Type in the dialog box below(Keydown Event)</p>
+		<input id="keydown" type="text">
+		<!-- Javascript changes letter to uppercase on keyup after user releases a key on keyboard -->
+		<p>Anythinng typed in the box below will be capitalised (onkeyup Event)</p>
+		Input some charaters: <input type="text" id="fname" onkeyup="transform()">
+		
+
+	</div>	
+	<div>
+		<h2>Frame/ object events</h2>
+		<!-- Javascript onerror Event-->
+		<p>An image to be loaded , but since theres an errow it triggers javascript onerror Event</p>
+		<!--a non existent image is referenced -->
+		<img src="cytonnlogo.png" onerror="errorloading()">
+		<!-- Javascript onload Event-->
+		<p> I have added a link to iframe the cytonn Website< (onload Event)</p>
+		<!-- added Cytonn website URL -->
+		<iframe onload="loaded()" src="https://cytonn.com" ></iframe>
+
+		<p id="cytonn"></p>
+
+		
+	</div>
+	<div>
+		<h2>Form Events</h2>
+		<!-- Using Javascript onchange to display a change in selection from a form -->
+		<p>Displaying what the user has selected from a dropdown</p>
+		<p>Select your department from the list</p>
+		<select id="selection" onchange="displaySelection()">
+			<!--List of the various options (Departments at Cytonn Investments) -->
+			<option value="Cytonn Technologies">Cytonn Technologies</option>
+			<option  value="Cytonn Real Astate">Cytonn Real Estate</option>
+			<option  value="Finance ">Cytonn Finance</option>
+			<option value="Human Resource">Human Resource</option>
+		</select>
+		<p id="myselection"></p>
+		<!-- Using on submit function in form -->
+		<p>On submitt </p>
+		<form onsubmit="success()">
+			Enter Name: <input type="text" name="FName"></input>
+			<input type="submit" value="submit"></input>
+		</form>
+		
+	</div>
+	<div>
+	<!-- oncopy Javascript event -->
+		<h2>Clipboard events</h2>
+		<p> Copy, cut or paste text in the box below :Oncopy</p>
+		<input type="text" oncopy="copied()" oncut="cutt()"value="Welcome to cytonn technologies">
+
+		<p id="clipboard"></p>
+
+		
+
+	</div>
+	<div>
+		<h2>Media Events</h2>
+		
+	</div>
+</body>
+</html>
