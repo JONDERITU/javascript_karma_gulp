@@ -1,5 +1,11 @@
 /*
-*/
+ * Cytonn Technologies
+ *
+ * @author: Joseph Gicha e <jgichane@cytonn.com>
+ *
+ * Project: Javascript.
+ *
+ */
 //include gulp
 var gulp = require('gulp');
 
